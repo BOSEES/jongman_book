@@ -4,9 +4,9 @@ function test(input) {
   let card = cards[1].map((e) => parseInt(e, 10));
   let count = cards[0];
   let max = 0;
-  for (let i = 0; i < card.length; i++){
-    for (let j = 0; j < card.length; j++){
-      for (let k = 0; k < card.length; k++){
+  for (let i = 0; i < card.length - 2; i++){
+    for (let j = i + 1; j < card.length - 1; j++){
+      for (let k = j + 1; k < card.length; k++){
         let sum = card[i] + card[j] + card[k];
         
         if(sum <= count[1] && sum > max) {
@@ -15,7 +15,7 @@ function test(input) {
       }
     } 
   }
-  return max;
+  return console.log(max);
 }
 
 test(input);
