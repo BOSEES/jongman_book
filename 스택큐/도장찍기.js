@@ -63,3 +63,5 @@ function sum_matrix(p, stemp) {
 
 
   console.log(sol(stemp, spin));
+
+  
