@@ -1,14 +1,12 @@
 function solution(s) {
-  let sArr = s.split("");
-  let arr = [sArr[0]];
+  let result = "";
 
-  for (let i = 1; i < sArr.length; i++) {
-    if(arr.indexOf(sArr[i])) {
-      arr.push(sArr[arr.indexOf(sArr[i])]);
-    } 
+  for (let i = 0; i < s.length; i++) {
+    if (!result.includes(s[i])) {
+      result += s[i];
+    }
   }
-  console.log(arr)
-  // return arr.join("");
+  return result;
 }
 
 console.log(solution("ksekkset"));
