@@ -39,7 +39,7 @@ let a=[1, 2, 1, 3, 1, 1, 1, 2];
 //   }
 //   return answer.length;
 // }
-
+// let a=[1, 2, 1, 3, 1, 1, 1, 2];
 function solution(m, arr) {
   let answer = 0;
   let left = 0;
