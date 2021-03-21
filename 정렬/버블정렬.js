@@ -1,4 +1,4 @@
-let arr=[13, 5, 11, 7, 23, 15];
+let arr=[1, 2, 3, -3, -2, 5, 6, -6];
 
 function solution(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
