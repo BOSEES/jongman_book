@@ -6,11 +6,10 @@ function solution(n, k, arr, m) {
 
   function DFS(L, s, sum) {
     if (L == k) {
-      if(sum !== m) return
-      else answer++;
+      if(sum % m == 0) return answer++;
     } else {
       for (let i = s; i < n; i++) {
-        temp[L] = arr[s];
+        temp[L] = arr[i];
         DFS(L + 1, i + 1, sum + arr[i]);
       }
     }
