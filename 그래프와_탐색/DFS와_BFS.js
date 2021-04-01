@@ -11,7 +11,7 @@ for (let [a, b] of arr) {
   graph[a][b] = 1;
   graph[b][a] = 1;
 }
-function solution(arr) {
+function solution() {
   let answer = [];
   let ch = Array(n + 1).fill(0);
   let s = "";
@@ -57,4 +57,4 @@ function BFS(v) {
   return ss.trim();
 }
 
-console.log(solution(arr))
+console.log(solution())
