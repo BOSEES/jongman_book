@@ -33,7 +33,7 @@ function solution(arr) {
   for(let i = 0; i < pointOne.length; i++) {
     board[pointOne[i][1]][pointOne[i][0]] = 1;
   }
-
+  console.log(board)
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < m; j++) {
       if (board[i][j] == 1) {
