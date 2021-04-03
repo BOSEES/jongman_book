@@ -10,7 +10,6 @@ function solution(input) {
   let answer = "";
   let inputData = input.shift();
   let n = parseInt(inputData[0]);
-  let m = parseInt(inputData[1]);
   let graph = Array.from({length: n + 1}, () => Array(n + 1).fill(0));
   let ch = Array.from({length: n + 1}, () => 0);
   let count = 0;
@@ -27,7 +26,7 @@ function solution(input) {
   }
 
   function DFS(v) {
-    count++
+    count++;
     ch[v] = 1;
     for(let i = 1; i <= n; i++) {
       if(graph[v][i] == 1 && ch[i] == 0) {
@@ -39,7 +38,7 @@ function solution(input) {
   }
   let max = Math.max.apply(null, maxArr);
   for (let i = 0; i < maxArr.length; i++) {
-    if(maxArr[i] == max) answer += (i+1) + " ";
+    if(maxArr[i] == max) answer += (i + 1) + " ";
   }
   return answer.trim();
 }
