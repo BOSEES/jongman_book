@@ -9,15 +9,11 @@ let input = `7
 let arr = input.split("\n").map((e) => e.split(" "));
 let n = arr.shift();
 
-
 function solution(input) {
   let answer = [];
   let N = parseInt(n[0]);
   let graph = Array.from({length: N + 1}, () => Array(N + 1).fill(0));
-  
-  
-  
-  
+
   for(let [a, b] of input) {
     graph[a][b] = 1;
     graph[b][a] = 1;
@@ -47,8 +43,7 @@ function solution(input) {
       }
     }
   }
-
   return answer;
 }
 
-console.log(solution(arr))
+console.log(solution(arr));
