@@ -1,10 +1,15 @@
-let input = `7
-1 6
-6 3
-3 5
-4 1
+let input = `12
+1 2
+1 3
 2 4
-4 7`
+3 5
+3 6
+4 7
+4 8
+5 9
+5 10
+6 11
+6 12`
 
 let arr = input.split("\n").map((e) => e.split(" "));
 let n = arr.shift();
