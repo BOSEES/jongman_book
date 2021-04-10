@@ -26,7 +26,7 @@ function solution(time) {
       path.push(time[i]);
     }
   }
-  console.log(path)
+  console.log(path);
   return answer;
 }
 
