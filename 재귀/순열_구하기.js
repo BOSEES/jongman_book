@@ -19,7 +19,8 @@ function solution(n, arr) {
       }
     }
   }
+  let a = Number.MAX_SAFE_INTEGER
   DFS(0)
   return answer;
 }
-console.log(solution(2, arr));
+console.log(solution(3, arr));

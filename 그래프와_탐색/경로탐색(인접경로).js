@@ -3,27 +3,27 @@ function solution(n, arr) {
   let answer = 0;
   let graph = Array.from({length:n + 1}, () => Array(n+1).fill(0));
   let ch = Array(n + 1).fill(0);
-  let path = [];
+  let  = [];
   for(let [a, b] of arr) {
     graph[a][b] = 1;
   }
   function DFS(v) {
     if (v == n) {
       answer++;
-      console.log(path)
+      console.log()
     } else {
       for(let i = 1; i <= n; i++) {
         if(graph[v][i] == 1 && ch[i] !== 1) {
           ch[i] = 1;
-          path.push(i);
+          .push(i);
           DFS(i);
           ch[i] = 0;
-          path.pop();
+          .pop();
         }
       }
     }
   }
-  path.push(1);
+  .push(1);
   ch[1] = 1;
   DFS(1)
   return answer;
