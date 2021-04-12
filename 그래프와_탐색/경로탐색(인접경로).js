@@ -3,7 +3,7 @@ function solution(n, arr) {
   let answer = 0;
   let graph = Array.from({length:n + 1}, () => Array(n+1).fill(0));
   let ch = Array(n + 1).fill(0);
-  let  = [];
+  let path = [];
   for(let [a, b] of arr) {
     graph[a][b] = 1;
   }
@@ -15,15 +15,15 @@ function solution(n, arr) {
       for(let i = 1; i <= n; i++) {
         if(graph[v][i] == 1 && ch[i] !== 1) {
           ch[i] = 1;
-          .push(i);
+          path.push(i);
           DFS(i);
           ch[i] = 0;
-          .pop();
+          path.pop();
         }
       }
     }
   }
-  .push(1);
+  path.push(1);
   ch[1] = 1;
   DFS(1)
   return answer;
