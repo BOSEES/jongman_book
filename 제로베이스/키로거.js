@@ -24,8 +24,10 @@ function sol(data) {
       } else if (str[j] === "-") {
         if (temp.length - 1 === cursor) {
           temp.pop();
+          cursor--;
         } else if (cursor !== 0) {
           temp.splice(cursor - 1, cursor);
+          cursor--;
         }
       } else {
         temp.push(str[j]);
