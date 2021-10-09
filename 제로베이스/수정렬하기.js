@@ -32,17 +32,17 @@ function selection(data) {
 //  5, 2, 3, 4, 1
 function insertion(data) {
   for (let i = 1; i < data.length; i++) {
-    let tmp = data[i];
+    let temp = data[i];
     for (let j = i - 1; j >= 0; j--) {
-      if (data[j] > tmp) {
+      if (data[j] > temp) {
         data[j + 1] = data[j];
-        data[j] = tmp;
+        data[j] = temp;
       } else {
         break;
       }
     }
   }
-  return data
+  return data;
 }
 
 console.log(bubble(input));
