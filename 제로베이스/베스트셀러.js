@@ -11,7 +11,6 @@ kimtop`;
 input = input.split("\n");
 function sol(data) {
   let answer = "";
-  const n = data.shift();
   const map = new Map();
   console.log(data);
 
