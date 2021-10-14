@@ -1,4 +1,4 @@
-let input = `AAAABBCCTTWW`;
+let input = `ABABCDD`;
 
 function sol(name) { 
   let answer = [];
@@ -15,6 +15,9 @@ function sol(name) {
   }
   let array = [...map.entries()];
 
+  let ch = 0
+  let t = ""
+
   for (let i of array) {
     if (i[1] % 2 === 0) {
       let count = i[1] / 2;
@@ -22,14 +25,14 @@ function sol(name) {
         answer.push(i[0]);
       }
     } else {
-      return "sorry man"
+      ch++;
+      t = i[0];
     }
   }
+  if (ch > 1) return "sorryman";
 
   let temp = answer.slice().reverse();
-
-
-  return answer.concat(temp).join("");
+  return answer.concat(t, temp).join("");
 }
 
 console.log(sol(input));
