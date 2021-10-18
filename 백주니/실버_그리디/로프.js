@@ -1,6 +1,8 @@
-let input = `2
+let input = `4
+30
 10
-15`;
+9
+8`;
 
 input = input.split("\n").map((e) => parseInt(e));
 
