@@ -1,32 +1,32 @@
 let input = [1,2,8,4,9];
-
-function sol(data) {
-  let result = 0;
-  data.sort((a, b) => a - b);
-
-  let min = data[1] - data[0];
-  let max = data[data.length - 1] - data[0]; 
+let target = 3;
+function sol(homes) {
+  homes.sort((a, b) => a - b);
+  let answer = 0;
+  const n = homes.length;
+  let min = homes[0];
+  let max = homes[n - 1] - homes[0];
   
-  while (min <= max) {
-    let mid = parseInt((min + max) / 2);
-    let count = 1;
-    let value = data[0];
-    for (let i = 1; i < data.length; i++) {
-      if (data[i] > value + mid) {
-        value = data[i];
+  while(min <= max) {
+    let mid = parseInt((max + min) / 2);
+    let count = 1
+    let value = homes[0];
+    for (let i = 1; i < n; i++) {
+      if (homes[i] - value >= mid) {
         count++;
+        value = homes[i];
       }
     }
 
-    if (count >= 3) {
+    if (count >= target) {
+      answer = mid;
       min = mid + 1;
-      result = mid;
     } else {
       max = mid - 1;
     }
   }
 
-  return result;
+  return answer;
 }
 
 console.log(sol(input));
