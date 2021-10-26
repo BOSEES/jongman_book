@@ -17,7 +17,8 @@ XXX..XX`;
 
 input = input.split("\n")
 function sol(data) {
-  let answer = ""
+  let a = 0;
+  let b = 0;
   const n = data.shift();
   const array = [];
   let index = 0;
@@ -29,25 +30,26 @@ function sol(data) {
     array.push(temp);
     index += 5;
   }
-  
+  console.log(array)
   let zz = Number.MAX_SAFE_INTEGER;;
   for (let i = 0; i < n; i++) {
-    let count = 0;
-    for(let j = i + 1; j < n - i; j++) {
+    for(let j = i + 1; j < n; j++) {
+      let count = 0;
       for (let k = 0; k < 5; k++) {
         for (let s = 0; s < 7; s++) {
-          if (data[i][k][s] !== data[j][k][s]) {
-            count++;
+          if (array[i][k][s] !== array[j][k][s]) {
+            count++
           }
         }
       }
-    }
-
-    if (zz > count) {
-      answer += 
+      if (zz > count) {
+        a = i + 1;
+        b = j + 1;
+        zz = Math.min(zz, count);
+      }
     }
   }
-
+  return `${a} ${b}`
 }
 
 console.log(sol(input));
