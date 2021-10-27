@@ -23,7 +23,7 @@ function sol(board) {
   let m = nm[1];
   let case1 = ["WBWBWBWB","BWBWBWBW","WBWBWBWB","BWBWBWBW","WBWBWBWB","BWBWBWBW","WBWBWBWB","BWBWBWBW"];
   let case2 = ["BWBWBWBW","WBWBWBWB","BWBWBWBW","WBWBWBWB","BWBWBWBW","WBWBWBWB","BWBWBWBW","WBWBWBWB"];
-  //case1
+
   for (let i = 0; i < n - 7; i++) {
     for (let j = 0; j < m - 7; j++) {
       let sum1 = 0;
