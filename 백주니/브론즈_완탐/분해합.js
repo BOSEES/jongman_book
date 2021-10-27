@@ -12,7 +12,7 @@ function sol(num) {
     }
     sum += answer;
     if (sum === num) {
-      return temp;
+      return answer;
     } else {
       answer++;
     }
