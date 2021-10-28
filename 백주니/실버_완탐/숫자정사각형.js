@@ -1,6 +1,15 @@
-let input = `2 2
-12
-34`;
+let input = `11 10
+9785409507
+2055103694
+0861396761
+3073207669
+1233049493
+2300248968
+9769239548
+7984130001
+1670020095
+8894239889
+4053971072`;
 
 input = input.split("\n").map((e) => {
   if (e.indexOf(" ") === -1) return e.split("").map((e) => parseInt(e));
@@ -22,7 +31,7 @@ function sol(data) {
         console.log(leftTop, leftDown, rightTop, rightDown);
   
         if (leftTop === leftDown && leftTop === rightTop && leftTop === rightDown) {
-          return n * n
+          return s * s
         } 
       }
     }
