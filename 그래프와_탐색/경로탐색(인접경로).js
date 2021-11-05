@@ -10,7 +10,6 @@ function solution(n, arr) {
   function DFS(v) {
     if (v == n) {
       answer++;
-      console.log()
     } else {
       for(let i = 1; i <= n; i++) {
         if(graph[v][i] == 1 && ch[i] !== 1) {
@@ -25,6 +24,7 @@ function solution(n, arr) {
   }
   path.push(1);
   ch[1] = 1;
+  console.log(path);
   DFS(1)
   return answer;
 }
