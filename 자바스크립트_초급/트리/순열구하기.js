@@ -19,7 +19,7 @@ function sol(numArray, targetLength) {
     }
   }
 
-  DFS(0,0)
+  DFS(0)
   return answer;
 }
 
