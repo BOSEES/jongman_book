@@ -1,22 +1,35 @@
-let output1 = letterCapitalize('hello world');
-console.log(output1); // "Hello World"
-let output2 = letterCapitalize('javascript  is sexy ');
-console.log(output2); // "Javascript  Is Sexy "
+function orderOfPresentation (N, K) {
+  // TODO: 여기에 코드를 작성합니다.
+const combie = [];
+const temp = Array.from({length: N}, () => 0);
+const ch = Array.from({length: N + 1}, () => 0);
 
-function letterCapitalize(str) {
-  let flag = 0;
-  let answer = "";
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === " ") {
-      answer += " "
-      flag = 0;
-    } else if (flag) {
-      answer += str[i]
+  function DFS(L) {
+    if (L === N) {
+      combie.push(temp.slice());
     } else {
-      answer += str[i].toUpperCase();
-      flag = 1;
+      for (let i = 1; i <= N; i++) {
+        if (ch[i] === 0) {
+          temp[L] = i;
+          ch[i] = 1;
+          DFS(L + 1);
+          ch[i] = 0;
+        }
+      }
     }
   }
 
-  return answer;
+  DFS(0)
+
+  for (let i = 0; i < combie.length; i++) {
+    let flag = 1;
+    for (let j = 0; j < combie[i].length; j++) {
+      if (combie[i][j] !== K[j]) {
+        flag = 0;
+      }
+    }
+    if (flag) {
+      return i;
+    }
+  }
 }
